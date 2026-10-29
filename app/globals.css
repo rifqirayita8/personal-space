@@ -1,26 +1,119 @@
 @import "tailwindcss";
 
+/* Palette: solder-mask green and gilt, after a circuit board. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --bg: #e9f0ea;
+  --fg: #0d3b32;
+  --muted: #476b62;
+  --line: #b7cbc0;
+  --accent: #f0c93b;
+  --on-accent: #0d3b32;
+  --panel-bg: #0d3b32;
+  --panel-fg: #e9f0ea;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #08201b;
+    --fg: #e3eee6;
+    --muted: #94b7ab;
+    --line: #1e463c;
+    --panel-bg: #e3eee6;
+    --panel-fg: #08201b;
   }
 }
 
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-panel: var(--panel-bg);
+  --color-panel-fg: var(--panel-fg);
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), Georgia, serif;
+}
+
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--fg);
+  outline-offset: 3px;
+}
+
+.panel :focus-visible {
+  outline-color: var(--panel-fg);
+}
+
+/* The one orchestrated moment: the name widens from condensed to its final width. */
+.hero-name {
+  font-variation-settings: "wdth" 100;
+  animation: name-widen 1100ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes name-widen {
+  from {
+    font-variation-settings: "wdth" 62;
+  }
+  to {
+    font-variation-settings: "wdth" 100;
+  }
+}
+
+/* Gilt highlighter band under links. It fills the text on hover and focus. */
+.marker {
+  --marker-rest: 0.3em;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% var(--marker-rest);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition:
+    background-size 160ms ease-out,
+    color 160ms ease-out;
+}
+
+.marker-hover {
+  --marker-rest: 0%;
+}
+
+.marker:hover,
+.marker:focus-visible,
+a:hover .marker-hover,
+a:focus-visible .marker-hover {
+  background-size: 100% 100%;
+  color: var(--on-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-name {
+    animation: none;
+  }
+
+  .marker {
+    transition: none;
+  }
 }
