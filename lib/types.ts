@@ -22,9 +22,10 @@ export type Project = {
 export type TimelineEntry = {
   kind: "work" | "education";
   period: string;
+  dates: string;
   title: string;
   organization: string;
-  description: string;
+  description?: string;
 };
 
 export type SkillGroup = {
@@ -36,7 +37,7 @@ export type Profile = {
   name: string;
   role: string;
   headline: string;
-  availability: string;
+  location: string;
   email: string;
   linkedin: string;
   cvPath: string;

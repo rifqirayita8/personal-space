@@ -16,7 +16,7 @@ A personal website for Rifqi Rayita Dhiyaulhaq, a software engineer, whose purpo
 
 ## Positioning
 
-Confirmed: the thing to be remembered is a full-stack engineer who is tidy and dependable, work that is readable, easy to maintain, and complete from the data model to the screen. The specific, differentiating proof behind that claim (which systems, which outcomes) is not yet supplied and stays open until the real projects arrive.
+Chosen in the first interview: to be remembered as a tidy, dependable engineer whose work is readable and easy to maintain. The LinkedIn profile supplied afterwards fixes the factual basis: a mobile developer (Flutter) who also builds REST back ends (Express.js), working in Agile (Scrum) teams, currently a software engineer at ADAMLabs in Surabaya. The earlier "full-stack, from the data model to the screen" wording was an assumption and is superseded by this; do not claim web front-end or other stacks the profile does not state. The differentiating proof (outcomes, metrics) is still not supplied.
 
 ## Operating Context
 
@@ -29,17 +29,19 @@ Visitors reach the site from outside links and often compare it against a CV or 
 - Stack is fixed by the existing codebase: Next.js 16.4.3 (App Router, `cacheComponents` and `partialPrefetching` enabled), React 19.3, Tailwind CSS 4, TypeScript. No `new Date()`/`Date.now()`/`Math.random()` during render; no `dynamicParams` segment config; `error.tsx` takes a `retry` prop. Read `node_modules/next/dist/docs/` before changing framework-level code (see AGENTS.md).
 - All site content lives in `content/*.ts` and `lib/seo.ts`; the visual layer lives in `app/` and `components/`.
 - Terminology: the person is "Rifqi Rayita Dhiyaulhaq"; the short mark is "RRD".
-- Undecided: the real LinkedIn profile URL (the current one is a guess), the production domain (`NEXT_PUBLIC_SITE_URL`), and whether to ship a dark mode at all.
+- Undecided: the production domain (`NEXT_PUBLIC_SITE_URL`), the real project write-ups, whether the two AdamExpertise v2 mentions on the profile (ADAMLabs 2025 and PT Wahana Meditek 2024) describe one project or two, and whether to show GitHub.
 
 ## Brand Commitments
 
 - Name: Rifqi Rayita Dhiyaulhaq, software engineer.
-- Public contact: `rifqirrd8@gmail.com` and LinkedIn only, no other social accounts.
+- Public contact: `rifqirrd8@gmail.com` and LinkedIn (`https://www.linkedin.com/in/mobiledeveloper-rifqi-rayita-dhiyaulhaq`, confirmed from the profile PDF) only. The profile also lists a GitHub, github.com/rifqirayita8; the user chose LinkedIn only, so it is not shown unless they ask.
 - No visual commitments have been made binding.
 
 ## Evidence on Hand
 
-The user states they have real projects, real work and education history, a publishable profile photo, and a real CV. None of these are in the repository yet. Everything currently shown (projects, employers, dates, skills, the "open to full-time roles and freelance projects" line, the CV PDF) is synthetic placeholder, flagged by the placeholder notice bar. Future work must not invent real-looking projects, employers, metrics, or testimonials, and must make the swap to real material easy when the user supplies it.
+Real, from the user's LinkedIn profile PDF (supplied in the conversation): name, headline, summary, location (Surabaya), work history (ADAMLabs 2026 to now and 2025; PT Winnicode Garuda Indonesia 2025 to 2026; PT Wahana Meditek Indonesia 2024), education (Politeknik Elektronika Negeri Surabaya; SMA Negeri 1 Ponorogo), top skills, and certifications (TOEFL ITP, EF SET English B2 59/100, JLPT with no level stated). Named projects on the profile: News Portal App (Winnicode) and AdamLIS / AdamExpertise v2 (Flutter). Two webinar moderator roles are listed but not shown on the site.
+
+Still synthetic placeholder: the three project write-ups (titles, problems, outcomes) and the CV PDF, flagged by the placeholder notice bar. The user also says they have a publishable profile photo and a real CV that are not in the repository. No availability status is stated, so none is shown. Future work must not invent projects, employers, metrics, outcomes, or testimonials, and must not add claims the profile does not make.
 
 ## Product Principles
 

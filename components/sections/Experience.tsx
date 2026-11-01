@@ -26,7 +26,10 @@ export function Experience() {
               <div className="pt-2">
                 <h3 className="heading-display text-3xl">{entry.title}</h3>
                 <p className="mt-1 font-semibold">{entry.organization}</p>
-                <p className="mt-2 max-w-[56ch]">{entry.description}</p>
+                <p className="text-paper-soft">{entry.dates}</p>
+                {entry.description ? (
+                  <p className="mt-2 max-w-[56ch]">{entry.description}</p>
+                ) : null}
               </div>
             </li>
           ))}

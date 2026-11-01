@@ -1,28 +1,51 @@
 import type { TimelineEntry } from "@/lib/types";
 
-// TODO: replace with the real work and education history.
+// Source: the user's LinkedIn profile PDF. Newest first.
 export const timeline: TimelineEntry[] = [
   {
     kind: "work",
-    period: "2025 to now",
+    period: "2026 to now",
+    dates: "March 2026 to present",
     title: "Software engineer",
-    organization: "Company name",
-    description:
-      "Build and maintain the web platform. Own features from design through release.",
+    organization: "ADAMLabs, Surabaya",
+  },
+  {
+    kind: "work",
+    period: "2025 to 2026",
+    dates: "October 2025 to April 2026",
+    title: "Mobile developer",
+    organization: "PT Winnicode Garuda Indonesia, Bandung",
+    description: "Magang Kemnaker Batch 1. Project: News Portal App.",
+  },
+  {
+    kind: "work",
+    period: "2025",
+    dates: "July 2025 to November 2025",
+    title: "Mobile developer",
+    organization: "ADAMLabs, Surabaya",
+    description: "Project: AdamLIS (AdamExpertise v2), built with Flutter.",
   },
   {
     kind: "work",
     period: "2024",
-    title: "Software engineer intern",
-    organization: "Company name",
+    dates: "July 2024 to December 2024",
+    title: "Mobile developer",
+    organization: "PT Wahana Meditek Indonesia, Surabaya",
     description:
-      "Shipped internal tools and fixed production issues alongside a small engineering team.",
+      "I was responsible for developing the entire mobile application for AdamExpertise V2 using Flutter. I handled everything from slicing, state management, and API integration to a responsive and consistent user experience, and worked closely with the design and backend teams.",
   },
   {
     kind: "education",
-    period: "Years attended",
-    title: "Degree name",
-    organization: "University name",
-    description: "Focus on software engineering and systems.",
+    period: "2022 to 2025",
+    dates: "August 2022 to October 2025",
+    title: "Associate's degree, Informatics",
+    organization: "Politeknik Elektronika Negeri Surabaya",
+  },
+  {
+    kind: "education",
+    period: "2019 to 2022",
+    dates: "July 2019 to July 2022",
+    title: "High school diploma, Natural Sciences",
+    organization: "SMA Negeri 1 Ponorogo",
   },
 ];

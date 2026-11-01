@@ -1,21 +1,23 @@
 import type { Profile } from "@/lib/types";
 
-// TODO: replace every placeholder below with final copy.
-// Set `placeholderContent` to false to remove the notice bar at the top of the site.
+// Name, role, contact, location, summary, and skills come from the user's LinkedIn profile PDF.
+// Still placeholder: the CV file and the project write-ups (see content/projects.ts).
+// Set `placeholderContent` to false to remove the notice bar once those are replaced.
 export const profile: Profile = {
   name: "Rifqi Rayita Dhiyaulhaq",
   role: "Software engineer",
   headline:
-    "I design and build web software that stays fast, readable, and easy to change.",
-  availability: "Open to full-time roles and freelance projects.",
+    "I build user-friendly mobile apps with Flutter and RESTful back ends with Express.js.",
+  location: "Based in Surabaya, East Java, Indonesia.",
   email: "rifqirrd8@gmail.com",
-  // TODO: confirm this is the real LinkedIn profile URL.
-  linkedin: "https://www.linkedin.com/in/rifqi-rayita-dhiyaulhaq",
+  linkedin:
+    "https://www.linkedin.com/in/mobiledeveloper-rifqi-rayita-dhiyaulhaq",
   // TODO: replace public/cv/rifqi-rayita-dhiyaulhaq-cv.pdf with the real CV.
   cvPath: "/cv/rifqi-rayita-dhiyaulhaq-cv.pdf",
   about: [
-    "I am a software engineer who likes turning vague requirements into small, dependable systems. I care about clear interfaces, honest naming, and code the next person can change without fear.",
-    "I work across the stack, from the data model to the screen. I am happiest when a project needs both careful engineering and a good eye for how people will actually use it.",
+    "I'm a mobile and back-end developer. I build scalable apps with Flutter and RESTful back ends with Express.js, and I care about smooth, responsive mobile experiences and efficient server-side architecture.",
+    "I work in Agile teams (Scrum) and do my best work in fast-paced, collaborative settings: iterating, communicating clearly, and adapting with the team.",
+    "I like learning new tools and best practices, optimizing performance, integrating third-party services, and writing clean, maintainable code.",
   ],
   placeholderContent: true,
 };

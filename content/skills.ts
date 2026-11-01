@@ -1,9 +1,12 @@
 import type { SkillGroup } from "@/lib/types";
 
-// TODO: adjust to the skills that should actually be shown.
+// Source: the user's LinkedIn profile PDF (summary, top skills, certifications).
 export const skills: SkillGroup[] = [
-  { label: "Languages", items: ["TypeScript", "JavaScript", "SQL"] },
-  { label: "Frontend", items: ["React", "Next.js", "Tailwind CSS"] },
-  { label: "Backend and data", items: ["Node.js", "PostgreSQL", "REST APIs"] },
-  { label: "Tooling", items: ["Git", "Docker", "CI/CD"] },
+  { label: "Mobile", items: ["Flutter", "State management"] },
+  { label: "Back end", items: ["Express.js", "REST APIs"] },
+  { label: "Design and practice", items: ["Figma", "Agile (Scrum)", "Clean code"] },
+  {
+    label: "Certifications",
+    items: ["TOEFL ITP", "EF SET English B2 (59/100)", "JLPT"],
+  },
 ];

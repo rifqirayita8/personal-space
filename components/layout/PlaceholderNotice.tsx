@@ -4,8 +4,8 @@ export function PlaceholderNotice() {
   return (
     <div className="bg-carmine text-sm text-paper">
       <Container className="py-2">
-        Placeholder content. Text, projects, and links are samples until the
-        final details are added.
+        The project write-ups and the CV file are placeholders until the final
+        versions are added.
       </Container>
     </div>
   );

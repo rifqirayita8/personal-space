@@ -22,7 +22,7 @@ export function Opening() {
                 </span>
               ))}
             </h1>
-            <p className="definitive__note">{profile.availability}</p>
+            <p className="definitive__note">{profile.location}</p>
             <Vignette
               motif="rosette"
               className="definitive__art print-ultra"
