@@ -7,29 +7,39 @@ export function About() {
     <section
       id="about"
       aria-labelledby="about-title"
-      className="scroll-mt-4 border-t border-line py-16 sm:py-24"
+      className="scroll-mt-4 pb-16 sm:pb-24"
     >
-      <Container className="grid gap-10 lg:grid-cols-12">
-        <h2
-          id="about-title"
-          className="font-sans text-3xl font-bold tracking-tight sm:text-4xl lg:col-span-4"
+      <Container>
+        <div
+          className="stamp perf on-paper p-8 sm:p-14"
+          style={{ ["--d" as string]: "16px", ["--r" as string]: "4.5px" }}
         >
-          About
-        </h2>
-        <div className="lg:col-span-8">
-          {profile.about.map((paragraph) => (
-            <p key={paragraph} className="mb-5 max-w-[62ch] text-lg leading-[1.75]">
-              {paragraph}
-            </p>
-          ))}
-          <h3 className="mt-12 font-sans text-xl font-semibold">Skills</h3>
-          <dl className="mt-5 grid gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div className="grid gap-10 lg:grid-cols-12">
+            <h2
+              id="about-title"
+              className="heading-display text-[clamp(2.75rem,6vw,4.5rem)] lg:col-span-4"
+            >
+              About
+            </h2>
+            <div className="lg:col-span-8">
+              {profile.about.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="mb-5 max-w-[66ch] text-lg leading-[1.7] last:mb-0"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+          <h3 className="heading-display mt-12 text-3xl">Skills</h3>
+          <dl className="mt-5 grid gap-x-8 gap-y-6 border-t-2 border-ink pt-6 sm:grid-cols-2">
             {skills.map((group) => (
               <div key={group.label}>
-                <dt className="font-sans text-base font-semibold">
-                  {group.label}
-                </dt>
-                <dd className="text-muted">{group.items.join(", ")}</dd>
+                <dt className="font-bold">{group.label}</dt>
+                <dd className="mt-1 text-lg font-medium">
+                  {group.items.join(", ")}
+                </dd>
               </div>
             ))}
           </dl>

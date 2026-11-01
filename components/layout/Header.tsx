@@ -10,21 +10,20 @@ const links = [
 
 export function Header() {
   return (
-    <header className="border-b border-line">
-      <Container className="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 py-3">
+    <header className="border-b border-paper-soft">
+      <Container className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-3">
         <Link
           href="/"
           aria-label="RRD, Rifqi Rayita Dhiyaulhaq, home"
-          className="py-2 font-sans text-xl font-extrabold tracking-tight"
-          style={{ fontVariationSettings: '"wdth" 125' }}
+          className="mark"
         >
-          RRD
+          <span className="mark__face perf">RRD</span>
         </Link>
         <nav aria-label="Primary">
-          <ul className="flex flex-wrap gap-x-5 font-sans text-[0.9375rem] font-medium">
+          <ul className="flex flex-wrap gap-x-6 text-[0.9375rem] font-semibold">
             {links.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="marker inline-block py-2">
+                <Link href={link.href} className="wavy inline-block py-2">
                   {link.label}
                 </Link>
               </li>

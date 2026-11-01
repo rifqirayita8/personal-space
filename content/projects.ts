@@ -4,6 +4,8 @@ import type { Project } from "@/lib/types";
 export const projects: Project[] = [
   {
     slug: "realtime-dashboard",
+    motif: "waveform",
+    ink: "ultra",
     title: "Realtime operations dashboard",
     year: "2025",
     summary:
@@ -18,6 +20,8 @@ export const projects: Project[] = [
   },
   {
     slug: "payments-api",
+    motif: "rosette",
+    ink: "carmine",
     title: "Payments API",
     year: "2024",
     summary:
@@ -32,6 +36,8 @@ export const projects: Project[] = [
   },
   {
     slug: "booking-app",
+    motif: "calendar",
+    ink: "ink",
     title: "Booking app",
     year: "2024",
     summary:

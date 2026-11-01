@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Source_Serif_4 } from "next/font/google";
+import { Atkinson_Hyperlegible_Next, Big_Shoulders } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { PlaceholderNotice } from "@/components/layout/PlaceholderNotice";
@@ -7,14 +7,14 @@ import { profile } from "@/content/profile";
 import { siteDescription, siteTitle, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
-const archivo = Archivo({
-  variable: "--font-archivo",
+const bigShoulders = Big_Shoulders({
+  variable: "--font-big-shoulders",
   subsets: ["latin"],
-  axes: ["wdth"],
+  axes: ["opsz"],
 });
 
-const sourceSerif = Source_Serif_4({
-  variable: "--font-source-serif",
+const atkinson = Atkinson_Hyperlegible_Next({
+  variable: "--font-atkinson",
   subsets: ["latin"],
 });
 
@@ -37,12 +37,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${sourceSerif.variable} h-full antialiased`}
+      className={`${bigShoulders.variable} ${atkinson.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <a
           href="#main"
-          className="sr-only bg-panel px-4 py-2 font-sans font-semibold text-panel-fg focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50"
+          className="sr-only bg-carmine px-4 py-2 font-semibold text-paper focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50"
         >
           Skip to content
         </a>

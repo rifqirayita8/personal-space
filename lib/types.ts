@@ -1,5 +1,11 @@
+export type Motif = "rosette" | "waveform" | "calendar" | "lattice";
+
+export type Ink = "ultra" | "carmine" | "ink";
+
 export type Project = {
   slug: string;
+  motif: Motif;
+  ink: Ink;
   title: string;
   year: string;
   summary: string;

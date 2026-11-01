@@ -24,37 +24,66 @@ export default async function Image({
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          padding: 80,
-          background: "#e9f0ea",
-          color: "#0d3b32",
+          padding: 56,
+          background: "#1c2c8c",
         }}
       >
-        <div style={{ fontSize: 36, fontWeight: 700, color: "#476b62" }}>
-          Rifqi Rayita Dhiyaulhaq
-        </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            padding: 28,
+            background: "#f4f5f2",
+            color: "#0e1440",
+          }}
+        >
           <div
             style={{
-              width: 160,
-              height: 18,
-              background: "#f0c93b",
-              marginBottom: 36,
-            }}
-          />
-          <div
-            style={{
-              fontSize: 92,
-              fontWeight: 800,
-              lineHeight: 1.02,
-              letterSpacing: -3,
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              padding: 36,
+              border: "4px solid #1c2c8c",
             }}
           >
-            {project?.title ?? "Project"}
-          </div>
-          <div style={{ fontSize: 36, marginTop: 28, color: "#476b62" }}>
-            {project?.stack.join(", ") ?? ""}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                fontSize: 40,
+                fontWeight: 700,
+                color: "#1c2c8c",
+              }}
+            >
+              <span>Rifqi Rayita Dhiyaulhaq</span>
+              <span style={{ color: "#d6001c" }}>{project?.year ?? ""}</span>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                fontSize: 100,
+                fontWeight: 900,
+                lineHeight: 0.98,
+                letterSpacing: -2,
+              }}
+            >
+              {project?.title ?? "Project"}
+            </div>
+            <div
+              style={{
+                display: "flex",
+                padding: "10px 24px",
+                background: "#d6001c",
+                color: "#f4f5f2",
+                fontSize: 38,
+                fontWeight: 700,
+              }}
+            >
+              {project?.stack.slice(0, 3).join(", ") ?? ""}
+            </div>
           </div>
         </div>
       </div>

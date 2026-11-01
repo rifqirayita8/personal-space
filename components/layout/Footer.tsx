@@ -3,10 +3,11 @@ import { profile } from "@/content/profile";
 
 export function Footer() {
   return (
-    <footer className="panel bg-panel text-panel-fg">
-      <Container className="flex flex-wrap items-center justify-between gap-4 border-t border-panel-fg/25 py-6 font-sans text-sm">
-        <p>{profile.name}</p>
-        <a href="#top" className="marker py-2">
+    <footer className="border-t border-paper-soft">
+      <Container className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-6 text-sm">
+        <p className="text-paper-soft">{profile.name}</p>
+        <p className="text-paper-soft">Plate 1 of 1, printed in three inks</p>
+        <a href="#top" className="wavy inline-block py-2 font-semibold">
           Back to top
         </a>
       </Container>

@@ -1,30 +1,27 @@
 "use client"; // Error boundaries must be Client Components
 
-import Link from "next/link";
-import { buttonClass } from "@/components/ui/Button";
+import { StampAction, StampLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { TitleStamp } from "@/components/ui/TitleStamp";
 
 export default function Error({ retry }: { error: unknown; retry: () => void }) {
   return (
-    <Container className="py-24 sm:py-32">
-      <h1 className="max-w-[14ch] font-sans text-[clamp(2.5rem,9vw,6rem)] font-extrabold leading-[0.98] tracking-tight">
-        This page failed to load
-      </h1>
-      <p className="mt-6 max-w-[46ch] text-xl leading-snug">
+    <Container className="pb-24 pt-8 sm:pt-12">
+      <TitleStamp
+        title="This page failed to load"
+        value="Error"
+        band="Not delivered"
+        motif="waveform"
+      />
+      <p className="mt-8 max-w-[44ch] text-2xl font-medium leading-snug">
         Something broke while loading this page. Try again, or go back to the
         home page.
       </p>
-      <div className="mt-8 flex flex-wrap gap-3">
-        <button
-          type="button"
-          onClick={() => retry()}
-          className={buttonClass("primary")}
-        >
-          Try again
-        </button>
-        <Link href="/" className={buttonClass("secondary")}>
+      <div className="mt-6 flex flex-wrap gap-4">
+        <StampAction onClick={() => retry()}>Try again</StampAction>
+        <StampLink href="/" variant="secondary">
           Go to home page
-        </Link>
+        </StampLink>
       </div>
     </Container>
   );

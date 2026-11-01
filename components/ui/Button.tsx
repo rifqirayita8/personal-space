@@ -1,29 +1,71 @@
-import type { AnchorHTMLAttributes } from "react";
+import Link from "next/link";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 
-type Variant = "primary" | "secondary";
+type Variant = "primary" | "secondary" | "ink";
 
-const base =
-  "inline-flex min-h-12 items-center justify-center rounded-sm border-2 px-6 font-sans text-base font-semibold transition-colors duration-150 motion-reduce:transition-none";
-
-const variants: Record<Variant, string> = {
-  primary:
-    "border-panel bg-panel text-panel-fg hover:border-accent hover:bg-accent hover:text-on-accent",
-  secondary:
-    "border-fg text-fg hover:border-accent hover:bg-accent hover:text-on-accent",
+type FaceProps = {
+  variant: Variant;
+  children: ReactNode;
 };
 
-export function buttonClass(variant: Variant): string {
-  return `${base} ${variants[variant]}`;
+// The anchor or button carries focus and motion; the inner face carries the perforated mask.
+function Face({ variant, children }: FaceProps) {
+  return (
+    <span className={`stamp-button__face perf stamp-button--${variant}`}>
+      {children}
+    </span>
+  );
 }
 
-type ButtonLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+type StampButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: string;
   variant?: Variant;
 };
 
-export function ButtonLink({
+// For hash, mailto, download, and external links.
+export function StampButton({
   variant = "primary",
-  className = "",
+  children,
   ...props
-}: ButtonLinkProps) {
-  return <a className={`${buttonClass(variant)} ${className}`} {...props} />;
+}: StampButtonProps) {
+  return (
+    <a className="stamp-button" {...props}>
+      <Face variant={variant}>{children}</Face>
+    </a>
+  );
+}
+
+type StampLinkProps = {
+  href: string;
+  variant?: Variant;
+  children: ReactNode;
+};
+
+// For client-side navigation between pages of this site.
+export function StampLink({
+  href,
+  variant = "primary",
+  children,
+}: StampLinkProps) {
+  return (
+    <Link href={href} className="stamp-button">
+      <Face variant={variant}>{children}</Face>
+    </Link>
+  );
+}
+
+type StampActionProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: Variant;
+};
+
+export function StampAction({
+  variant = "primary",
+  children,
+  ...props
+}: StampActionProps) {
+  return (
+    <button type="button" className="stamp-button" {...props}>
+      <Face variant={variant}>{children}</Face>
+    </button>
+  );
 }

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-01T00:00:00Z",
+  "title": "Design System: Rifqi Rayita Dhiyaulhaq, Software Engineer",
+  "extensions": {
+    "colorMeta": {
+      "ultramarine": { "role": "primary", "displayName": "Ultramarine Ground", "canonical": "#1c2c8c", "tonalRamp": ["#0a1040", "#101a60", "#1c2c8c", "#3a4aa8", "#6370bf", "#8d96d2", "#b6bce5", "#dcdff3"] },
+      "carmine": { "role": "primary", "displayName": "Carmine Seal", "canonical": "#d6001c", "tonalRamp": ["#4a0008", "#7a0010", "#a80016", "#d6001c", "#e2404f", "#ec7a85", "#f4b0b6", "#fadcdf"] },
+      "deep-ink": { "role": "secondary", "displayName": "Deep Ink", "canonical": "#0e1440", "tonalRamp": ["#05081f", "#0e1440", "#222a5c", "#3a4278", "#5a6192", "#8a8fb4", "#b8bbd3", "#e0e1ec"] },
+      "stamp-paper": { "role": "neutral", "displayName": "Stamp Paper", "canonical": "#f4f5f2", "tonalRamp": ["#5b5d58", "#7a7c77", "#9a9c97", "#b8bab5", "#d0d2cd", "#e2e4df", "#eceee9", "#f4f5f2"] },
+      "paper-soft": { "role": "neutral", "displayName": "Selvage Paper", "canonical": "color-mix(in srgb, #f4f5f2 80%, #1c2c8c) approx #c9cdde", "tonalRamp": ["#6e7599", "#8a90b0", "#a3a8c4", "#b8bdd3", "#c9cdde", "#d6d9e6", "#e4e6ef", "#f0f1f6"] },
+      "ink-soft": { "role": "neutral", "displayName": "Soft Ink", "canonical": "color-mix(in srgb, #0e1440 74%, #f4f5f2) approx #4a4f6e", "tonalRamp": ["#1a2050", "#2c3260", "#3c4268", "#4a4f6e", "#686c88", "#8a8da3", "#b0b2c2", "#d6d7e0"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Name on the definitive stamp; capped at 6rem." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings and title-stamp page titles." },
+      "title": { "displayName": "Title", "purpose": "Stamp titles, years, value bands, subheads." },
+      "body": { "displayName": "Body", "purpose": "Default reading text." },
+      "body-large": { "displayName": "Body Large", "purpose": "About paragraphs, 66ch measure." },
+      "label": { "displayName": "Label", "purpose": "Nav links and button text." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-print", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Registration passes and hover lifts." },
+      { "name": "print-carmine", "value": "900ms, 140ms delay, translate(8px,-6px) to 0", "purpose": "Carmine pass registering on load." },
+      { "name": "print-ultra", "value": "900ms, 380ms delay, translate(-7px,5px) to 0", "purpose": "Ultramarine pass registering on load." },
+      { "name": "lift", "value": "160ms; translateY(-4px) stamp links, -2px buttons", "purpose": "Hover and focus response." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "stamp-container", "value": "36rem (container query on the home stamp)" },
+      { "name": "lg", "value": "64rem (opening sheet two columns)" },
+      { "name": "xl", "value": "1280px (cancellation mark shown)" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Stamp Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Carmine perforated stamp button for the main action (Email me, Download CV).",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Email me</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; min-height: 3rem; padding: 0 1.75rem; font: 700 1rem/1.1 'Atkinson Hyperlegible Next', system-ui, sans-serif; text-decoration: none; transition: transform 160ms cubic-bezier(0.16,1,0.3,1); --r: 3px; --d: 10px; -webkit-mask-image: radial-gradient(circle at 50% 0, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 50% 100%, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 0 50%, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 100% 50%, #0000 var(--r), #000 calc(var(--r) + 0.5px)); -webkit-mask-size: var(--d) 100%, var(--d) 100%, 100% var(--d), 100% var(--d); -webkit-mask-repeat: repeat-x, repeat-x, repeat-y, repeat-y; -webkit-mask-position: center; -webkit-mask-composite: source-in; mask-image: radial-gradient(circle at 50% 0, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 50% 100%, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 0 50%, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 100% 50%, #0000 var(--r), #000 calc(var(--r) + 0.5px)); mask-size: var(--d) 100%, var(--d) 100%, 100% var(--d), 100% var(--d); mask-repeat: repeat-x, repeat-x, repeat-y, repeat-y; mask-position: center; mask-composite: intersect; } .ds-btn-primary { background: #d6001c; color: #f4f5f2; } .ds-btn:hover { transform: translateY(-2px); text-decoration: underline wavy; text-decoration-thickness: 2px; text-underline-offset: 0.25em; } .ds-btn:focus-visible { outline: 3px solid #f4f5f2; outline-offset: 4px; }"
+    },
+    {
+      "name": "Secondary Stamp Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Paper perforated stamp button for the second action (View projects).",
+      "html": "<a class=\"ds-btn ds-btn-secondary\" href=\"#\">View projects</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; min-height: 3rem; padding: 0 1.75rem; font: 700 1rem/1.1 'Atkinson Hyperlegible Next', system-ui, sans-serif; text-decoration: none; transition: transform 160ms cubic-bezier(0.16,1,0.3,1); --r: 3px; --d: 10px; mask-image: radial-gradient(circle at 50% 0, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 50% 100%, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 0 50%, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 100% 50%, #0000 var(--r), #000 calc(var(--r) + 0.5px)); mask-size: var(--d) 100%, var(--d) 100%, 100% var(--d), 100% var(--d); mask-repeat: repeat-x, repeat-x, repeat-y, repeat-y; mask-position: center; mask-composite: intersect; } .ds-btn-secondary { background: #f4f5f2; color: #0e1440; } .ds-btn:hover { transform: translateY(-2px); text-decoration: underline wavy; text-decoration-thickness: 2px; text-underline-offset: 0.25em; } .ds-btn:focus-visible { outline: 3px solid #f4f5f2; outline-offset: 4px; }"
+    },
+    {
+      "name": "Ink Stamp Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Deep-ink perforated stamp button, used on paper panels (LinkedIn).",
+      "html": "<a class=\"ds-btn ds-btn-ink\" href=\"#\">LinkedIn</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; min-height: 3rem; padding: 0 1.75rem; font: 700 1rem/1.1 'Atkinson Hyperlegible Next', system-ui, sans-serif; text-decoration: none; transition: transform 160ms cubic-bezier(0.16,1,0.3,1); --r: 3px; --d: 10px; mask-image: radial-gradient(circle at 50% 0, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 50% 100%, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 0 50%, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 100% 50%, #0000 var(--r), #000 calc(var(--r) + 0.5px)); mask-size: var(--d) 100%, var(--d) 100%, 100% var(--d), 100% var(--d); mask-repeat: repeat-x, repeat-x, repeat-y, repeat-y; mask-position: center; mask-composite: intersect; } .ds-btn-ink { background: #0e1440; color: #f4f5f2; } .ds-btn:hover { transform: translateY(-2px); text-decoration: underline wavy; text-decoration-thickness: 2px; text-underline-offset: 0.25em; } .ds-btn:focus-visible { outline: 3px solid #0e1440; outline-offset: 4px; }"
+    },
+    {
+      "name": "Project Stamp",
+      "kind": "card",
+      "refersTo": "stamp",
+      "description": "Perforated paper stamp with ink frame, engraving-ink year, and soft-ink summary; a link to a project page.",
+      "html": "<a class=\"ds-stamp-link\" href=\"#\"><span class=\"ds-stamp\"><span class=\"ds-art\"></span><span><span class=\"ds-head\"><span class=\"ds-title\">Project title</span><span class=\"ds-year\">2025</span></span><span class=\"ds-sum\">One-line summary of the work.</span></span></span></a>",
+      "css": ".ds-stamp-link { display: block; transition: transform 160ms cubic-bezier(0.16,1,0.3,1); } .ds-stamp-link:hover, .ds-stamp-link:focus-visible { transform: translateY(-4px); } .ds-stamp { --engrave: #1c2c8c; --d: 14px; --r: 4px; position: relative; display: grid; grid-template-columns: 5rem 1fr; align-items: center; gap: 1rem; padding: 1.5rem 1.75rem; background: #f4f5f2; color: #0e1440; mask-image: radial-gradient(circle at 50% 0, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 50% 100%, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 0 50%, #0000 var(--r), #000 calc(var(--r) + 0.5px)), radial-gradient(circle at 100% 50%, #0000 var(--r), #000 calc(var(--r) + 0.5px)); mask-size: var(--d) 100%, var(--d) 100%, 100% var(--d), 100% var(--d); mask-repeat: repeat-x, repeat-x, repeat-y, repeat-y; mask-position: center; mask-composite: intersect; } .ds-stamp::before { content: ''; position: absolute; inset: 0.7rem; border: 2px solid #0e1440; pointer-events: none; } .ds-stamp > * { position: relative; } .ds-stamp-link:hover .ds-stamp::before, .ds-stamp-link:focus-visible .ds-stamp::before { border-color: #d6001c; } .ds-stamp-link:hover .ds-title { text-decoration: underline wavy; text-decoration-thickness: 2px; } .ds-art { display: block; aspect-ratio: 1; border: 2px solid var(--engrave); border-radius: 50%; } .ds-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; } .ds-title { font: 800 1.875rem/1 'Big Shoulders', 'Arial Narrow', sans-serif; } .ds-year { color: var(--engrave); font: 700 1.5rem/1 'Big Shoulders', 'Arial Narrow', sans-serif; } .ds-sum { display: block; margin-top: 0.5rem; font: 400 0.9375rem/1.3 'Atkinson Hyperlegible Next', system-ui, sans-serif; color: #4a4f6e; } .ds-stamp-link:focus-visible { outline: 3px solid #f4f5f2; outline-offset: 4px; }"
+    },
+    {
+      "name": "Value Band",
+      "kind": "custom",
+      "refersTo": "value-band",
+      "description": "Carmine band that closes a name or title stamp with the role or page descriptor.",
+      "html": "<p class=\"ds-band\">Software engineer</p>",
+      "css": ".ds-band { background: #d6001c; color: #f4f5f2; padding: 0.4rem 1rem; font: 700 2rem/1.15 'Big Shoulders', 'Arial Narrow', sans-serif; margin: 0; }"
+    },
+    {
+      "name": "Postmark",
+      "kind": "custom",
+      "refersTo": "postmark",
+      "description": "Round paper postmark with a double carmine ring carrying a timeline period.",
+      "html": "<svg class=\"ds-postmark\" viewBox=\"0 0 112 112\" width=\"112\" height=\"112\"><circle cx=\"56\" cy=\"56\" r=\"54\" fill=\"#f4f5f2\"/><circle cx=\"56\" cy=\"56\" r=\"49\" fill=\"none\" stroke=\"#d6001c\" stroke-width=\"3\"/><circle cx=\"56\" cy=\"56\" r=\"43\" fill=\"none\" stroke=\"#d6001c\" stroke-width=\"1.5\"/><text x=\"56\" y=\"52\" text-anchor=\"middle\" fill=\"#0e1440\" font-size=\"20\" font-weight=\"700\">2023</text><text x=\"56\" y=\"76\" text-anchor=\"middle\" fill=\"#0e1440\" font-size=\"20\" font-weight=\"700\">NOW</text></svg>",
+      "css": ".ds-postmark { transform: rotate(-6deg); font-family: 'Big Shoulders', 'Arial Narrow', sans-serif; }"
+    },
+    {
+      "name": "Airmail Contact Panel",
+      "kind": "custom",
+      "refersTo": "stamp",
+      "description": "Paper panel inside a hard-stop airmail stripe border and ultramarine keyline.",
+      "html": "<div class=\"ds-airmail\"><div class=\"ds-airmail-panel\"><h2>Get in touch</h2><a class=\"ds-email\" href=\"#\">name@example.com</a></div></div>",
+      "css": ".ds-airmail { border: 2px solid #1c2c8c; padding: 0.875rem; background: repeating-linear-gradient(135deg, #d6001c 0 1.125rem, #f4f5f2 1.125rem 2.25rem, #1c2c8c 2.25rem 3.375rem, #f4f5f2 3.375rem 4.5rem); } .ds-airmail-panel { background: #f4f5f2; color: #0e1440; padding: 2rem; } .ds-airmail-panel h2 { margin: 0; font: 800 3rem/0.95 'Big Shoulders', 'Arial Narrow', sans-serif; } .ds-email { display: inline-block; margin-top: 1.5rem; color: #0e1440; font: 800 2.5rem/1 'Big Shoulders', 'Arial Narrow', sans-serif; } .ds-email:hover, .ds-email:focus-visible { text-decoration: underline wavy; text-decoration-thickness: 2px; text-underline-offset: 0.3em; outline: 3px solid #0e1440; outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Stamp Sheet",
+    "overview": "The site is one flat ultramarine sheet carrying paper-white stamps. Everything that is content sits on a stamp, a band, or a postmark; the sheet itself only holds them. The idea is delivery as proof of dependability: work issued, perforated, and cancelled, like mail that arrived. The three inks are fixed, and nothing outside them is printed.\n\nIt is a single light theme with no dark mode, because the sheet is one object. Surfaces are hard-edged and flat. Detail comes from perforated edges, an engraved keyline inside each stamp, and line-work vignettes, not from shadow, blur, or colour blending.",
+    "keyCharacteristics": [
+      "Three inks (ultramarine, carmine, deep ink) on one stamp paper, plus two derived tints for secondary text.",
+      "Perforated edges made with CSS masks; no border radius anywhere.",
+      "Narrow, heavy display lettering (Big Shoulders) for anything stamped; a humane reading face (Atkinson Hyperlegible Next) for anything read.",
+      "Flat: no shadows, no colour gradients. Depth by overlap and by the lift of hover.",
+      "One motion moment: colour passes registering onto a fixed keyline on load."
+    ],
+    "rules": [
+      { "name": "The Three Inks Rule", "body": "Only ultramarine, carmine, and deep ink print. Tints exist only as the two derived mixes above, for secondary text and hairlines; a fourth hue is never introduced.", "section": "colors" },
+      { "name": "The Ground Is Ultramarine Rule", "body": "Reading text on the sheet is paper; reading text on paper is deep ink. Carmine is never body text on the ultramarine ground.", "section": "colors" },
+      { "name": "The One Ink Per Stamp Rule", "body": "A project keeps one engraving ink (--engrave: ultramarine, carmine, or deep ink) for its vignette and year on every page it appears.", "section": "colors" },
+      { "name": "The Stamped Words Rule", "body": "Anything lettered onto a stamp, band, or postmark (names, titles, years, periods, values) is Big Shoulders; anything a visitor reads in sentences is Atkinson.", "section": "typography" },
+      { "name": "The Case As Written Rule", "body": "Display lettering is set in the case of the content; no uppercase transforms and no letter-spacing tracking are used on text. Ring text on the cancellation mark is written in capitals in its content.", "section": "typography" },
+      { "name": "The Flat Sheet Rule", "body": "Surfaces are flat at rest. The only response to state is a small vertical lift (-4px on stamp links, -2px on buttons) and a colour change of the frame, never a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do put every piece of content on a stamp, a band, or the sheet in paper text; give stamp, button, and mark edges real perforation masks.",
+      "Do keep to ultramarine #1c2c8c, carmine #d6001c, deep ink #0e1440, and stamp paper #f4f5f2.",
+      "Do letter names, years, titles, and periods in Big Shoulders and set sentences in Atkinson Hyperlegible Next; cap display at 6rem.",
+      "Do use the wavy cancellation underline as the hover and focus signal for links.",
+      "Do draw vignettes as line-work in the stamp's single --engrave ink.",
+      "Do keep a visible focus outline: paper on the ultramarine ground, deep ink inside .on-paper panels."
+    ],
+    "donts": [
+      "Don't add shadows, blur, or colour gradients; the airmail stripe and perforation masks are the only gradient functions.",
+      "Don't round corners; circles belong to postmarks only.",
+      "Don't add a dark theme or a fourth ink.",
+      "Don't set carmine as small text on the ultramarine ground.",
+      "Don't return to a headline over a row of equal cards: the opening is a sheet of different-sized stamps."
+    ]
+  }
+}

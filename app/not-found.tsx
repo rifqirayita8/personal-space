@@ -1,20 +1,22 @@
-import Link from "next/link";
+import { StampLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { buttonClass } from "@/components/ui/Button";
+import { TitleStamp } from "@/components/ui/TitleStamp";
 
 export default function NotFound() {
   return (
-    <Container className="py-24 sm:py-32">
-      <h1 className="max-w-[14ch] font-sans text-[clamp(2.5rem,9vw,6rem)] font-extrabold leading-[0.98] tracking-tight">
-        Page not found
-      </h1>
-      <p className="mt-6 max-w-[46ch] text-xl leading-snug">
-        The page you opened doesn&apos;t exist or has moved. Go back to the home
-        page to find what you need.
+    <Container className="pb-24 pt-8 sm:pt-12">
+      <TitleStamp
+        title="Page not found"
+        value="404"
+        band="Returned to sender"
+        motif="lattice"
+      />
+      <p className="mt-8 max-w-[44ch] text-2xl font-medium leading-snug">
+        The page you opened doesn&apos;t exist or has moved.
       </p>
-      <Link href="/" className={`${buttonClass("primary")} mt-8`}>
-        Go to home page
-      </Link>
+      <div className="mt-6">
+        <StampLink href="/">Go to home page</StampLink>
+      </div>
     </Container>
   );
 }

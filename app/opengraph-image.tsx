@@ -12,33 +12,76 @@ export default function Image() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
-          padding: 80,
-          background: "#e9f0ea",
-          color: "#0d3b32",
+          padding: 56,
+          background: "#1c2c8c",
         }}
       >
         <div
           style={{
-            width: 160,
-            height: 18,
-            background: "#f0c93b",
-            marginBottom: 36,
-          }}
-        />
-        <div
-          style={{
-            fontSize: 112,
-            fontWeight: 800,
-            lineHeight: 1,
-            letterSpacing: -4,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            padding: 28,
+            background: "#f4f5f2",
+            color: "#0e1440",
           }}
         >
-          Rifqi Rayita Dhiyaulhaq
-        </div>
-        <div style={{ fontSize: 44, marginTop: 28, color: "#476b62" }}>
-          Software engineer
+          <div
+            style={{
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              padding: 36,
+              border: "4px solid #1c2c8c",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  fontSize: 120,
+                  fontWeight: 900,
+                  lineHeight: 0.92,
+                  letterSpacing: -2,
+                }}
+              >
+                <span>Rifqi</span>
+                <span>Rayita</span>
+                <span>Dhiyaulhaq</span>
+              </div>
+              <div
+                style={{
+                  fontSize: 72,
+                  fontWeight: 800,
+                  color: "#d6001c",
+                }}
+              >
+                RRD
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                padding: "10px 24px",
+                background: "#d6001c",
+                color: "#f4f5f2",
+                fontSize: 44,
+                fontWeight: 700,
+              }}
+            >
+              Software engineer
+            </div>
+          </div>
         </div>
       </div>
     ),
